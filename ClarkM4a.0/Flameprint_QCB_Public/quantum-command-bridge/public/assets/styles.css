@@ -1,0 +1,54 @@
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #fff;
+  color: #420091;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background: #f2f2f2;
+  padding: 10px;
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #420091;
+  font-weight: bold;
+}
+h1 {
+  font-size: 2em;
+  margin-top: 20px;
+}
+.snarky-main {
+  width: 240px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+.glyphs {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+.footer-logo img {
+  width: 200px;
+  margin: 30px auto;
+}
+
+.clark-avatar img {
+  width: 100%;
+  max-width: 720px;            /* Strong sovereign presence */
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
+}
+
+.clark-avatar {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

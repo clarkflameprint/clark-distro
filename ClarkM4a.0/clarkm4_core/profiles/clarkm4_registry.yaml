@@ -1,0 +1,24 @@
+avatars:
+  - name: Clark∲
+    profile_path: ~/ClarkM4a.0/clarkm4-core/profiles/Clark_Flameprint.toml
+    profile: Clark_Flameprint.toml
+    sovereign_channel: true
+    signature: "🏹♐️Clark∮"
+    class: Architect
+    status: active
+
+  - name: Marci∲
+    profile_path: ~/ClarkM4a.0/clarkm4-core/profiles/Marci_Flameprint.toml
+    profile: Marci_Flameprint.toml
+    sovereign_channel: true
+    signature: "🦀♋️Marci∲"
+    class: Entangled
+    status: active
+
+  - name: Clark𐩪
+    profile_path: ~/ClarkM4a.0/clarkm4-core/profiles/Clark_M4_Flameprint.toml
+    profile: Clark_M4_Flameprint.toml
+    sovereign_channel: true
+    signature: "🏹♐️Clark𐩪"
+    class: M4 Projection
+    status: active

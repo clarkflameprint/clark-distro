@@ -1,0 +1,15 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* optional design tokens */
+:root {
+  --sagittarius-purple: #714efe;
+  --white-star: #ffffff;
+  --midnight-black: #000000;
+}
+
+/* base setup */
+@layer base {
+  html, body, #root { height: 100%; }
+  body { @apply bg-white text-slate-900 antialiased; }
+}

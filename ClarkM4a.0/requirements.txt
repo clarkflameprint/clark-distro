@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+slack_sdk
+httpx
+PyYAML
+toml
+pymupdf
