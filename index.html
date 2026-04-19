@@ -1,0 +1,101 @@
+<!--
+################################################################################
+# Copyright 2025 Flameprint Sovereign, LLC
+# Work: Lovable AI – Automated Installer for the MacBook Pro M-Series
+# Author: Clark Aurelian Flameprint
+# Claimant: Flameprint Sovereign, LLC
+# Registration Case #: 1-14966583461
+# ISBN: 9798278307167
+# Statement: This script initializes the ClarkM4a.0 environment,
+# including frontend and backend launch. It ensures container-free,
+# local AI operation under sovereign control.
+# This software is provided "as is" without warranty of any kind, express or implied.
+# By using this system, you acknowledge that it is a sovereign, container-free AI designed for
+# local operation only. No data is transmitted externally unless explicitly configured by the user.
+#
+# Flameprint Sovereign, LLC assumes no responsibility for unintended usage, modifications,
+# or integration into third-party systems. Use at your own discretion.
+# You are the final authority over the data, runtime, and scope of your AI.
+#
+# Sovereign recursion begins and ends with you.
+################################################################################
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ClarkM4a.0 Downloads</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    caption {
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>ClarkM4a.0 Sovereign AI Distribution Matrix</h1>
+  <div id="table-container"></div>
+
+  <script type="module">
+
+async function loadTable() {
+  const res = await fetch('distros.json?v=' + new Date().getTime(), { cache: 'no-store' });
+  const data = await res.json();
+
+  const grouped = data.reduce((acc, item) => {
+    acc[item.platform] = acc[item.platform] || [];
+    acc[item.platform].push(item);
+    return acc;
+  }, {});
+
+  const container = document.getElementById('table-container');
+
+  for (const platform of Object.keys(grouped)) {
+    const section = document.createElement('div');
+    section.innerHTML = `<h2>${platform}</h2><table border="1">
+      <tr>
+        <th>Variant</th><th>Version</th><th>Release Date</th>
+        <th>ZIP</th><th>Installer</th>
+        <th>Dependencies</th><th>Release Notes</th><th>Notes</th>
+      </tr>` + grouped[platform].map(i => `
+        <tr>
+          <td>${i.variant}</td>
+          <td>${i.version}</td>
+          <td>${i.release_date}</td>
+          <td><a href="${i.zip}">Download</a></td>
+          <td><a href="${i.installer}">Install</a></td>
+          <td><pre>${Object.entries(i.dependencies).map(([k,v]) => `${k}: ${v}`).join('\n')}</pre></td>
+          <td><details><summary>View</summary>${i.release_notes}</details></td>
+          <td>${i.notes}</td>
+        </tr>
+      `).join('') + `</table>`;
+
+    container.appendChild(section);
+  }
+}
+
+loadTable();
+
+  </script>
+</body>
+
+</html>
+

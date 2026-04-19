@@ -1,0 +1,35 @@
+[
+  {
+    "variant": "Minimal (Mac M-Series)",
+    "platform": "Mac",
+    "version": "4.0",
+    "release_date": "2025-12-23",
+    "zip": "ClarkM4a.0.zip",
+    "installer": "clarkm4a.0_install.sh",
+    "notes": "Primary build, tested on MacBook Pro M1/M2",
+    "release_notes": "Adds auto-start, fixes frontend connection bug, updated zip structure. Compatible with all M1/M2 Macs.",
+    "dependencies": {
+      "python": ">=3.10",
+      "node": ">=18",
+      "bun": ">=1.0.3",
+      "sqlite3": "any",
+      "macOS": ">=13.0 (Ventura)"
+    }
+  },
+  {
+    "variant": "Minimal (Linux Debian)",
+    "platform": "Linux",
+    "version": "4.0",
+    "release_date": "2025-12-23",
+    "zip": "ClarkM4a.0_debian.zip",
+    "installer": "clarkm4a.0_debian_install.sh",
+    "notes": "In progress — Debian 12+ compatible",
+    "release_notes": "Init build. Curl + unzip must be installed. Logs to ./clarkm4.log.",
+    "dependencies": {
+      "debian": ">=12",
+      "curl": ">=7.88",
+      "unzip": "any"
+    }
+  }
+]
+
